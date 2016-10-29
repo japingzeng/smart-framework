@@ -16,4 +16,12 @@ public class StringUtil {
     public static  boolean isNotEmpty(String str) {
         return !isEmpty(str);
     }
+
+    public static String[] splitString(String param, String regex) {
+        String[] array = null;
+        if (isNotEmpty(param)) {
+            array = param.split(regex);
+        }
+        return array;
+    }
 }

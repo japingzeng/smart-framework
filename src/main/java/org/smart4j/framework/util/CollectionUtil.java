@@ -14,7 +14,7 @@ public class CollectionUtil {
         return CollectionUtils.isEmpty(collection);
     }
 
-    public static boolean isNotEmptt(Collection<?> collection) {
+    public static boolean isNotEmpty(Collection<?> collection) {
         return !isEmpty(collection);
     }
 
