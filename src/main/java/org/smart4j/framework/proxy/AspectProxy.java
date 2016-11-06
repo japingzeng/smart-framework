@@ -14,10 +14,10 @@ import java.lang.reflect.Method;
 public abstract class AspectProxy implements Proxy{
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AspectProxy.class);
-
+   
     @Override
-    Object doProxy(ProxyChain proxyChain) throws Throwable {
-        Object result = null;
+    public Object doProxy(ProxyChain proxyChain) throws Throwable {
+    	Object result = null;
         Class<?> cls = proxyChain.getTargetClass();
         Method method = proxyChain.getTargetMethod();
         Object[] params = proxyChain.getMethodParams();
@@ -44,6 +44,7 @@ public abstract class AspectProxy implements Proxy{
     public void begin() {
 
     }
+    
     public boolean intercept(Class<?> cls, Method method, Object[] params) throws Throwable {
         return true;
     }
